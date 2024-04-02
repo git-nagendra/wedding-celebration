@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ankita & Vishal</title>
+    <!-- style css -->
+    <link rel="stylesheet" href="./assest/css/style.css" />
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="./assest/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  </head>
+  <body>
+    <!-- Images from Unsplash -->
+    <div class="header py-3">
+      <div class="container">
+        <div class="logo">
+          <h1 class="ms-3">
+            <span id="mov">
+              <span class="Ankita">Ankita</span> <span>&</span
+              ><span class="Vishal"><span>Vishal</span></span>
+            </span>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="slider-container">
+      <h1>
+        Wishing you both a happy <br />
+        and prosperous future
+      </h1>
+      <div
+        class="slide"
+        style="background-image: url(./assest/image/slider1.webp)"
+      ></div>
+
+      <div
+        class="slide"
+        style="
+          background-image: url(./assest/image/slider4.avif);
+          background-position: top center !important;
+        "
+      ></div>
+
+      <div
+        class="slide"
+        style="background-image: url(./assest/image/slider3.webp)"
+      ></div>
+
+      <div class="controls-container">
+        <div class="control"></div>
+        <div class="control"></div>
+        <div class="control"></div>
+      </div>
+    </div>
+
+    <div class="song">
+      <div class="pause" onclick="togglePlay()">
+        <span><i class="fa-solid fa-circle-play"></i></span>
+      </div>
+      <div class="player">
+        <audio
+          class="audio"
+          src="./assest/image/din-shagna-da-ringtone-44433.mp3"
+          autoplay
+          type="audio"
+          loop=""
+        ></audio>
+      </div>
+    </div>
+
+    <!-- app js -->
+    <script src="./assest/js/app.js"></script>
+    <!-- bootstrap js -->
+    <script src="./assest/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed("#mov", {
+        strings: [, "Happy Marriage Life"],
+        typeSpeed: 200,
+        backSpeed: 120,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lobster", sans-serif !important;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.logo h1 {
+  padding: 0;
+  margin: 0;
+}
+.Ankita {
+  color: #d92528;
+}
+.Vishal {
+  color: #d92528;
+}
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.typed-cursor.typed-cursor--blink {
+  animation: typedjsBlink 0.7s infinite;
+  -webkit-animation: typedjsBlink 0.7s infinite;
+  animation: typedjsBlink 0.7s infinite;
+  color: #d92528 !important;
+  font-size: 10px !important;
+}
+.typed-cursor {
+  color: #d92528 !important;
+  font-size: 15px !important;
+  font-weight: 700;
+}
+.slider-container h1 {
+  color: #dfa917;
+  font-size: 5rem;
+  letter-spacing: 5px;
+  position: relative;
+  z-index: 100;
+  text-align: center;
+  font-family: "Lobster", sans-serif;
+}
+
+.slider-container::after {
+  background-color: #000;
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+@media only screen and (max-width: 998px) {
+  .slider-container h1 {
+    font-size: 3.6rem;
+  }
+}
+@media only screen and (max-width: 668px) {
+  .slider-container h1 {
+    font-size: 3rem;
+  }
+}
+.slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  transform: scale(1.15);
+  transition: opacity 0.6s ease;
+}
+
+.slide.active {
+  animation: grow 12s linear forwards;
+  opacity: 1;
+}
+
+@keyframes grow {
+  0%,
+  20% {
+    transform: scale(1);
+  }
+
+  75%,
+  100% {
+    transform: scale(1.13);
+  }
+}
+
+.controls-container {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.control {
+  background-color: #fff;
+  cursor: pointer;
+  opacity: 0.5;
+  margin-bottom: 8px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  transition: opacity 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+.control.active,
+.control:hover {
+  background-color: #d92528;
+  opacity: 1;
+  transform: scale(1);
+}
+.song {
+  position: absolute;
+  top: 83%;
+  left: 54%;
+  transform: translate(-83%,-54%);
+  z-index: 999;
+}
+
+.pause {
+  font-size: 70px;
+  color: #fff;
+  position: relative;
+  z-index: 99;
+  
+}
+
+.pause::after {
+  content: "";
+  position: absolute;
+  height: 200px;
+  top: -45%;
+  left: -90%;
+  width: 200px;
+  background: #c11704cd;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: move 3s linear infinite;
+}
+
+@keyframes move {
+	0%   {
+		transform: scale(0.5);
+		opacity: 0.3;
+	}
+	50%   {
+		transform: scale(0.8);
+		opacity: 0.5;
+	}
+	100%   {
+		transform: scale(1);
+		opacity: 0.2;
+	}
+  }
