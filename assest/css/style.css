@@ -91,7 +91,10 @@ body {
 }
 @media only screen and (max-width: 668px) {
   .slider-container h1 {
-    font-size: 3rem;
+    font-size: 3.4rem;
+  }
+  .slider-container{
+    height: 90vh;
   }
 }
 .slide {
